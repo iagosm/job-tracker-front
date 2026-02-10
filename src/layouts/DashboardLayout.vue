@@ -2,43 +2,49 @@
   <div class="d-flex">
     <!-- SIDEBAR -->
     <aside
-      class="bg-dark text-white sidebar d-flex flex-column"
+      class="sidebar d-flex flex-column"
+      style="background-color: #FFFFFF"
       :class="{ 'sidebar-closed': !sidebarOpen }"
     >
-      <div class="p-3 border-bottom border-secondary fw-bold fs-5">
-        🚀 Job Tracker
+      <div class="p-4 border-bottom">
+        <div class="d-flex align-items-center gap-2">
+          <div class="d-flex align-items-center justify-content-center rounded"
+            style="width: 40px; height: 40px; background-color: #0d6efd;"
+          >
+            <ActivityIcon class="text-white" />
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold">JobTracker</h6>
+            <small class="text-secondary">Gestão de Vagas</small>
+          </div>
+        </div>
       </div>
 
-      <ul class="nav nav-pills flex-column p-3 gap-1">
-        <!-- DASHBOARD (rota pai) -->
+      <ul class="nav nav-pills flex-column p-3 gap-1" id="sidebarItens">
         <li class="nav-item">
           <RouterLink
             to="/dashboard"
-            class="nav-link text-white"
+            class="nav-link"
             exact-active-class="active"
           >
             <ActivityIcon class="me-2" />
             Dashboard
           </RouterLink>
         </li>
-
-        <!-- MÉTRICAS -->
         <li class="nav-item">
           <RouterLink
             to="/dashboard/analytics"
-            class="nav-link text-white"
+            class="nav-link"
             active-class="active"
           >
             <BarChart2Icon class="me-2" />
             Métricas
           </RouterLink>
         </li>
-
-        <!-- CANDIDATURAS -->
         <li class="nav-item">
           <RouterLink
             to="/dashboard/candidaturas"
-            class="nav-link text-white"
+            class="nav-link"
             active-class="active"
           >
             <UserCheckIcon class="me-2" />
@@ -47,8 +53,18 @@
         </li>
         <li class="nav-item">
           <RouterLink
+            to="/dashboard/criar_candidaturas"
+            class="nav-link"
+            active-class="active"
+          >
+            <UserCheckIcon class="me-2" />
+            Criar Candidaturas
+          </RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink
             to="/dashboard/perfil"
-            class="nav-link text-white"
+            class="nav-link"
             active-class="active"
           >
             <User class="me-2" />
@@ -56,49 +72,14 @@
           </RouterLink>
         </li>
       </ul>
+      <div id="logoutBtn" class="mt-auto p-4 border-top w-100 d-flex  gap-2" @click="logout">
+        <LogOut />
+        <span>Sair</span>
+      </div>
     </aside>
-    <div class="flex-grow-1 min-vh-100 bg-light">
-      <nav class="navbar navbar-expand bg-white shadow-sm px-3">
-        <button class="btn btn-outline-primary me-3" @click="toggleSidebar">
-          ☰
-        </button>
-        <div class="flex-grow-1"></div>
-        <div class="dropdown">
-          <a
-            href="#"
-            class="d-flex align-items-center text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown"
-          >
-            <img
-              src="https://i.pravatar.cc/40"
-              alt="user"
-              width="40"
-              height="40"
-              class="rounded-circle me-2"
-            />
-            <strong>João Silva</strong>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow">
-            <li>
-              <RouterLink class="dropdown-item" to="/dashboard/perfil">
-                👤 Perfil
-              </RouterLink>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <button
-              class="dropdown-item text-danger"
-              @click="logout"
-            >
-              🚪 Sair
-            </button>
-
-          </ul>
-        </div>
-      </nav>
-      <main class="container-fluid p-4">
-        <RouterView />
-      </main>
-    </div>
+    <main class="container-fluid p-4" style="background-color: #F8FAFC;">
+      <RouterView />
+    </main>
   </div>
 </template>
 
@@ -110,6 +91,7 @@ import {
   BarChart2Icon,
   UserCheckIcon,
   User,
+  LogOut,
 } from 'lucide-vue-next'
 
 const sidebarOpen = ref(true)
@@ -136,4 +118,28 @@ function logout() {
 .sidebar-closed {
   margin-left: -250px;
 }
+
+/* #sidebarItens .nav-link.active { */
+#sidebarItens .nav-link {
+  color: #334155;
+}
+#sidebarItens .nav-link.active {
+  color: #2563EB;
+  background-color: #EFF6FF;
+}
+#sidebarItens .nav-link:hover:not(.active) {
+  background-color: #F8FAF6;
+}
+
+#logoutBtn:hover {
+  cursor: pointer;
+  background-color: #F8FAF6;
+}
 </style>
+
+<!-- <LogOut  @click="logout"/> <span>Sair</span> -->
+
+<!-- color nav active rgb(37 99 235 / var(1, 1)) -->
+ <!-- hover = rgb(248 250 252 / var(1, 1)); -->
+
+ <!-- texto /* color: rgb(51 65 85 / var(--tw-text-opacity, 1)); -->

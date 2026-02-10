@@ -11,6 +11,7 @@ import Login from '@/pages/auth/Login.vue'
 import DashboardLayout from '@/layouts/DashboardLayout.vue'
 import Home from '@/pages/dashboard/Home.vue'
 import Candidaturas from '@/pages/dashboard/Candidaturas.vue'
+import CriarCandidatura from '@/pages/dashboard/CriarCandidatura.vue'
 import Analytics from '@/pages/dashboard/Analytics.vue'
 import Perfil from '@/pages/dashboard/Perfil.vue'
 
@@ -44,6 +45,11 @@ const router = createRouter({
           path: 'candidaturas',
           name: 'Candidaturas',
           component: Candidaturas
+        },
+        {
+          path: 'criar_candidaturas',
+          name: 'Criar Candidaturas',
+          component: CriarCandidatura
         },
         {
           path: 'analytics',
