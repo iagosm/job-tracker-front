@@ -1,11 +1,11 @@
 <template>
-  <div class="container-main">
+  <div class="container">
     <h3>Dashboard</h3>
     <p>Acompanhe suas candidaturas em tempo real</p>
     <div class="row g-3">
          <div class="col-12 col-md-6 col-lg-12">
-            <div class="card h-100 p-3">
-              <div class="d-flex align-items-center gap-3">
+            <div class="card h-100 p-4">
+              <div class="d-flex align-items-center gap-3 mb-4">
                 <span class="d-inline-flex align-items-center justify-content-center rounded-circle fw-bold text-primary bg-primary bg-opacity-10"
                     style="width: 2rem; height: 2rem;"
                   > 
@@ -14,32 +14,31 @@
               </div>
               <div>
                 <form class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputEmail1" class="form-label">Empresa</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Cargo / Posição</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Plataforma</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Link da Vaga</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Tipo de Trabalho</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Localização</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nível da Vaga</label>
                     <select id="inputState" class="form-select">
                       <option value="estagio">Estágio</option>
@@ -49,7 +48,7 @@
                       <option value="especialista">Especialista</option>
                     </select>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Status</label>
                     <select id="inputState" class="form-select">
                       <option value="aplicado">Aplicado</option>
@@ -65,31 +64,31 @@
                       <option value="desistiu">Desistiu</option>
                     </select>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Salário Mínimo</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Salário Máximo</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Data de Aplicação</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Data de Resposta</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-3">
                     <label for="exampleInputPassword1" class="form-label">Data de Encerramento</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <div class="col-md-2 mt-4 form-check">
+                  <div class="col-md-2 mb-3 mt-4 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Salário a combinar</label>
                   </div>
-                  <div class="col-md-3 mt-4 form-check">
+                  <div class="col-md-3 mb-3 mt-4 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck2">
                     <label class="form-check-label" for="exampleCheck2">Currículo visualizado</label>
                   </div>
@@ -120,11 +119,12 @@
                   <p class="text-secondary mb-1">Nenhuma tecnologia adicionada</p>
                   <p class="small text-muted mb-0">Clique em "Adicionar Tecnologia" para começar</p>
                 </div>
-                 <form class="row">
+                 <div class="row m-4 py-5">
                   <div class="col-md-3">
                     <label for="exampleInputPassword1" class="form-label">Status</label>
                     <select id="inputState" class="form-select">
                       <option value="">Selecione uma tecnologia</option>
+                      <option value="php">PHP</option>
                       <option value="react">React</option>
                       <option value="typescript">TypeScript</option>
                       <option value="nodejs">Node.js</option>
@@ -134,25 +134,21 @@
                     </select>
                   </div>
                   <div class="col-md-3">
-                    <label for="exampleInputPassword1" class="form-label">Status</label>
+                    <label for="exampleInputPassword1" class="form-label">Nível</label>
                     <select id="inputState" class="form-select">
-                      <option value="">Selecione uma tecnologia</option>
-                      <option value="react">React</option>
-                      <option value="typescript">TypeScript</option>
-                      <option value="nodejs">Node.js</option>
-                      <option value="python">Python</option>
-                      <option value="java">Java</option>
-                      <option value="javascript">JavaScript</option>
+                      <option value="basico">Básico</option>
+                      <option value="intermediario">Intermédiario</option>
+                      <option value="avancado">Avançado</option>
                     </select>
                   </div>
                   <div class="col-md-3 mt-5 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                    <label class="form-check-label" for="exampleCheck2">Currículo visualizado</label>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                    <label class="form-check-label" for="exampleCheck3">Currículo visualizado</label>
                   </div>
                   <div class="col-md-3 mt-5 form-check">
                     <X color="#EF4444" :size="18" />
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -179,8 +175,61 @@
                   <p class="text-secondary mb-1">Nenhuma etapa registrado</p>
                   <p class="small text-muted mb-0">Adicione etapas do processo seletivo</p>
                 </div>
-                <form class="row">
-
+                <form class="row m-4 py-5">
+                  <div class="col-md-6">
+                    <label for="exampleInputPassword1" class="form-label">Tipo de Etapa</label>
+                    <select id="inputState" class="form-select">
+                      <option value="pessoal">Pessoal</option>
+                      <option value="empresa">Empresa</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleInputPassword1" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleInputPassword1" class="form-label">Status</label>
+                    <select id="inputState" class="form-select">
+                      <option value="pessoal">Pessoal</option>
+                      <option value="empresa">Empresa</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Data Agendada</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Data Realizada</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Data de Resposta</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Entrevistadores</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Duração (minutos)</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Feedback da Empresa</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Feedback Pessoal</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Nota de Autoavaliação (1-5)</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1">
+                  </div>
                 </form>
               </div>
             </div>
@@ -215,8 +264,47 @@
                   <p class="text-secondary mb-1">Nenhum feedback registrado</p>
                   <p class="small text-muted mb-0">Adicione feedbacks da empresa ou pessoais</p>
                 </div>
-                <form class="row">
-
+                <form class="row m-4 py-5">
+                  <div class="col-md-6">
+                    <label for="exampleInputPassword1" class="form-label">Tipo</label>
+                    <select id="inputState" class="form-select">
+                      <option value="pessoal">Pessoal</option>
+                      <option value="empresa">Empresa</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleInputPassword1" class="form-label">Nota (1-5)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Feedback</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Pontos Fortes</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Pontos Fracos</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label">Aprendizados</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="exampleInputPassword1" class="form-label">Motivo de Rejeição (se aplicável)</label>
+                    <select id="inputState" class="form-select">
+                      <option value="">Nenhum</option>
+                      <option value="perfil_nao_adequado">Perfil não adequado</option>
+                      <option value="conhecimento_tecnico">Conhecimento Técnico</option>
+                      <option value="experiencia_insuficiente">Experiência insuficiente</option>
+                      <option value="pretensao_salarial">Pretensão Salárial</option>
+                      <option value="soft_skills">Soft Skills</option>
+                      <option value="vaga_cancelada">Vaga Cancelada</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
                 </form>
               </div>
             </div>
